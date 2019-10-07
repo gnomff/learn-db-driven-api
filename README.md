@@ -57,5 +57,5 @@ electricbreath (50 damage, electric)
 
 Important concepts:  
 Many to many (requires a join table, no foriegn keys in entity tables)  
-One to many (requires a forign key in the 'many' side of the relationship)
+One to many (requires a foreign key in the 'many' side of the relationship)
 
