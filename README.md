@@ -38,7 +38,7 @@ GET /dragon/:id - shows info for a specific dragon, including thier spell list a
 GET /wizard/:id - shows info for a specific wizard, including thier spell list and thier list of dragons
 GET /spells - lists out the available spells
 DELETE /dragon/:id
-DELETE /wizard/:id
+DELETE /wizard/:id - all dragons owned by this wizard are also deleted
 ```
 
 There are three main entities - Dragons, Wizards and Spells.
