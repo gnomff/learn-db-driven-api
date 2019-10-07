@@ -19,7 +19,9 @@ flyway.user=postgres
 flyway.password=password
 
 flyway.locations=filesystem:migrations
-flyway.schemas=dragons```  
+flyway.schemas=dragons
+```  
+
 You'll notice that the connection info lines up with the database that you started earlier.  
 `flyway.locations` tells flyway which directory your migration scripts are in, and `flyway.schemas` tells flyway which schema it should install itself into.  
 
@@ -30,9 +32,25 @@ Flyway will not let you change your migration files once they have been run. If 
 # Project
 
 The project is as follows. Create an API with the following endpoints:
-POST /dragons - creates a new dragon
-POST /wizard - creates a new wizard
-GET /dragons - lists all dragons, who thier wizard master is. dragons can only have one wizard master.
-GET /wizard - lists all wizards, and who thier dragons are. Wizards can have many dragons.
-GET /dragon/:id - shows info for a specific dragon, including thier spell list and the name of thier wizard.
-GET /wizard/:id - shows info for a specific wizard, including thier spell list and thier list of dragons.
+```
+POST /dragons - creates a new dragon {"name":<name>, "color":<color>, "spells": [spell ids], "wizard_id":<id>} wizard_id is optional
+POST /wizard - creates a new wizard {"name":<name>, "dragons":[dragon ids], "spells":[spell ids]}
+GET /dragons - lists all dragons - id, name, color and wizard master, if they have one
+GET /wizard - lists all wizards - id, name, and the name/id/color of all the dragons they have
+GET /dragon/:id - shows info for a specific dragon, including thier spell list and the name of thier wizard
+GET /wizard/:id - shows info for a specific wizard, including thier spell list and thier list of dragons
+```
+
+There are three main entities - Dragons, Wizards and Spells.
+Dragons can have one, and only one Wizard.  
+Dragons can have any number of Spells.  
+Wizards can have any number of Dragons.
+Wizards can also have any number of Spells.  
+
+Spell list:
+```
+magic missle (30 damage, arcane)
+firebreath (40 damage, fire)
+icebreath (35 damage, ice)
+electricbreath (50 damage, electric)
+```  
