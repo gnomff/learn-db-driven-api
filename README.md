@@ -24,7 +24,7 @@ You'll notice that the connection info lines up with the database that you start
 
 When you run `npm run migrate` for the first time, flyway will create a special table in the `dragons` schema, called `flyway_schema_history`. This is where it will keep track of which .sql files have been run and which ones haven't. Subsequent calls to `npm run migrate` will check against that table and only run files which have not been run before.
 
-Flyway will not let you change your migration files once they have been run. If you want to do that, you can call `npm run clean` which will drop the `dragons` schema entirely. You can then run `npm migrate` again and the db will be populated with your new script.
+Flyway will not let you change your migration files once they have been run. If you want to do that, you can call `npm run clean` which will drop the `dragons` schema entirely. You can then run `npm run migrate` again and the db will be populated with your new script.
 
 # Project
 
