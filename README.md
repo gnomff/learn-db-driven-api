@@ -36,6 +36,9 @@ GET /dragons - lists all dragons - id, name, color and wizard master, if they ha
 GET /wizard - lists all wizards - id, name, and the name/id/color of all the dragons they have
 GET /dragon/:id - shows info for a specific dragon, including thier spell list and the name of thier wizard
 GET /wizard/:id - shows info for a specific wizard, including thier spell list and thier list of dragons
+GET /spells - lists out the available spells
+DELETE /dragon/:id
+DELETE /wizard/:id
 ```
 
 There are three main entities - Dragons, Wizards and Spells.
