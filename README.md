@@ -51,3 +51,8 @@ firebreath (40 damage, fire)
 icebreath (35 damage, ice)
 electricbreath (50 damage, electric)
 ```  
+
+Important concepts:
+Many to many (requires a join table, no foriegn keys in entity tables)
+One to many (requires a forign key in the 'many' side of the relationship)
+
