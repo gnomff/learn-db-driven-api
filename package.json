@@ -1,0 +1,18 @@
+{
+  "name": "learn-db-driven-api",
+  "version": "1.0.0",
+  "description": "basic db driven api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "flyway migrate",
+    "clean": "flyway clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "flywaydb-cli": "^0.8.3",
+    "pg-promise": "^9.3.3"
+  }
+}
