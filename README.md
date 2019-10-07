@@ -6,12 +6,9 @@ repo for learning how to set up a sql backed api
 The purpose of this project is to get familiar with developing SQL backed APIs. To get started, run `docker run --name some-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=test -p5432:5432 -d postgres`
 to start up your local postgres container.
 
-then run `npm migrate`  
-to execute the migration files against your database  
+then run `npm migrate` to execute the migration files against your database  
 
-and finally  
-`node index.js`  
-will start up your server.
+and finally `node index.js` will start up your server.
 
 There are several important things to talk about. First, `flyway.conf` is where all of your connection information is stored. It looks like:  
 ```flyway.url=jdbc:postgresql://localhost:5432/test
